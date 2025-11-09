@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
@@ -15,7 +15,7 @@ body {
   margin: 50px auto;
   padding: 20px;
   border-radius: 8px;
-  color: #2c3e50; 
+  color: #2c3e50;
 }
 
 header {
@@ -31,53 +31,63 @@ hr {
   margin-bottom: 20px;
   border: 1px solid #2980b9;
 }
+
 .form-grid,
 .policy,
 .plans-container,
 .terms {
   width: 90%;
   margin: 30px auto;
-  background-color: #d6eaf8; 
+  background-color: #d6eaf8;
   padding: 20px;
   border-radius: 20px;
   color: #2c3e50;
   border: 2px solid #2980b9;
   box-shadow: 0 2px 6px rgba(41, 128, 185, 0.2);
 }
+
 .form-grid {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 15px 20px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.form-grid label {
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-row label {
+  flex: 0 0 200px;
   font-weight: 700;
 }
 
-.form-grid small {
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #2980b9;
+  color: #2c3e50;
+  width: 100%;
+}
+
+.form-row small {
   font-weight: 300;
   color: #7f8c8d;
   display: block;
   margin-top: 3px;
 }
 
-.form-grid input[type="text"],
-.form-grid input[type="email"],
-.form-grid input[type="tel"],
-.form-grid input[type="number"],
-.form-grid input[type="date"] {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #2980b9;
-  width: 100%;
-  color: #2c3e50;
-}
-
-.form-grid .radio-group {
+.radio-group {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
 .plans-container {
   display: flex;
   justify-content: space-around;
@@ -102,7 +112,7 @@ hr {
 .plan_a:hover,
 .plan_b:hover {
   transform: translateY(-5px);
-  border-color: #3498db; 
+  border-color: #3498db;
   box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
 }
 
@@ -117,6 +127,7 @@ hr {
   font-weight: bold;
   margin-left: 10px;
 }
+
 .policy {
   display: flex;
   flex-wrap: wrap;
@@ -149,6 +160,7 @@ hr {
   margin: 0 5px;
   color: #2c3e50;
 }
+
 .terms {
   display: flex;
   flex-direction: column;
